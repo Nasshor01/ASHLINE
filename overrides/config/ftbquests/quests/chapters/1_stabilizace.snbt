@@ -1,0 +1,74 @@
+{
+	id: "ashline_ch1"
+	filename: "1_stabilizace"
+	title: "Stabilizace"
+	icon: "ashline:filter_paper"
+	order_index: 1
+	quest_links: []
+	quests: [
+		{
+			id: "ashline_q_filter"
+			x: 0.0d
+			y: 0.0d
+			title: "Voda, která nezabije"
+			description: ["Vyrob filtr nebo převař 8 vod."]
+			icon: "ashline:filter_charcoal"
+			tasks: [{
+				id: "t_filter"
+				type: "item"
+				item: { id: "ashline:filter_charcoal" Count: 1 }
+			}]
+			rewards: [{ id: "r_filter" type: "item" item: { id: "ashline:filter_charcoal" Count: 1 } }]
+		}
+		{
+			id: "ashline_q_cans"
+			x: 2.0d
+			y: 0.0d
+			title: "Konzervy"
+			description: ["Získej 8 konzerv. Osada bez jídla se vzbouří."]
+			icon: "ashline:canned_food"
+			tasks: [{
+				id: "t_cans"
+				type: "item"
+				item: { id: "ashline:canned_food" Count: 8 }
+			}]
+		}
+		{
+			id: "ashline_q_baricade"
+			x: 2.0d
+			y: 1.5d
+			title: "Zabedni to"
+			description: ["Zabedni 4 okna. Díra = wanderer v noci."]
+			icon: "minecraft:oak_planks"
+			tasks: [{
+				id: "t_bar"
+				type: "item"
+				item: { id: "minecraft:oak_planks" Count: 16 }
+				consume_items: false
+			}]
+		}
+		{
+			id: "ashline_q_loot_gas"
+			x: 2.0d
+			y: -1.5d
+			title: "Benzinka"
+			description: ["Vyčisti benzinku. remaining=0 v bounding box. /ashline remaining"]
+			icon: "ashline:gasoline_can"
+			tasks: [{ id: "t_gas" type: "checkmark" title: "Benzinka remaining=0" }]
+		}
+		{
+			id: "ashline_q_scrap_16"
+			x: 4.0d
+			y: 0.0d
+			title: "Šrot"
+			description: ["16 scrap z wraků a spotřebičů."]
+			icon: "ashline:scrap"
+			tasks: [{
+				id: "t_scrap"
+				type: "item"
+				item: { id: "ashline:scrap" Count: 16 }
+			}]
+			rewards: [{ id: "r_jerry" type: "item" item: { id: "ashline:empty_can" Count: 1 } }]
+		}
+	]
+}

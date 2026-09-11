@@ -1,0 +1,27 @@
+[
+  {
+    "_comment": "Deny indoor natural spawn: solid roof in overworld (city interiors).",
+    "dimension": "minecraft:overworld",
+    "hassolidroof": true,
+    "result": "deny"
+  },
+  {
+    "_comment": "No creepers, phantoms, witches, wandering traders in overworld.",
+    "dimension": "minecraft:overworld",
+    "mob": ["minecraft:creeper", "minecraft:phantom", "minecraft:witch", "minecraft:wandering_trader"],
+    "result": "deny"
+  },
+  {
+    "_comment": "Cap random zombie-like surface spawns. Structure streets should stay sparse.",
+    "dimension": "minecraft:overworld",
+    "mob": ["minecraft:zombie", "minecraft:husk", "minecraft:drowned", "minecraft:zombie_villager"],
+    "minheight": 60,
+    "maxcount": 8,
+    "result": "default"
+  },
+  {
+    "_comment": "Nether/End stay vanilla — do not apply city rules.",
+    "dimension": ["minecraft:the_nether", "minecraft:the_end"],
+    "result": "default"
+  }
+]

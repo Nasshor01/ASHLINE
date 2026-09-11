@@ -1,0 +1,27 @@
+{
+  "id": "holds",
+  "display": {
+    "en_us": "Free Holds",
+    "cs_cz": "Svobodné državy"
+  },
+  "icon": "minecraft:bread",
+  "currency": "minecraft:bread",
+  "standing_min": -1000,
+  "standing_max": 1000,
+  "thresholds": {
+    "hostile": -250,
+    "neutral": 0,
+    "trusted": 100,
+    "allied": 400
+  },
+  "weights": {
+    "kill_member": -150,
+    "loot_chest": -40,
+    "save_member": 60,
+    "trade": 4,
+    "complete_contract": 40
+  },
+  "enemies": ["choir"],
+  "members": [],
+  "notes": "MineColonies colonists + village-like; members resolved at runtime."
+}

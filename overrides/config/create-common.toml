@@ -1,0 +1,14 @@
+# Create — ASHLINE starter notes (1.20.1)
+# Real file after install is usually config/create-common.toml — merge keys then.
+
+[worldgen]
+	# Prefer Lost Cities ruins over Create village intrusion if both fight — tune at home
+	disableTrainStations = false
+
+[recipes]
+	# Ammo / gun recipes are gated by KubeJS, not Create alone
+	# Keep kinetics available early for presses / mills (noise hooks later)
+
+[kinetics]
+	# Machines emit noise via ashline-senses later (press/mill 40/28, steam 60/40)
+	maxRotationSpeed = 256

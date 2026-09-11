@@ -1,0 +1,99 @@
+{
+	id: "ashline_ch4"
+	filename: "4_zelezo"
+	title: "Železo a soukolí"
+	icon: "create:water_wheel"
+	order_index: 4
+	quest_links: []
+	quests: [
+		{
+			id: "ashline_q_waterwheel"
+			x: 0.0d
+			y: 0.0d
+			title: "Kolo"
+			description: ["Postav Create water wheel. Create je ekonomika, ne dekorace."]
+			icon: "create:water_wheel"
+			tasks: [{
+				id: "t_wheel"
+				type: "item"
+				item: { id: "create:water_wheel" Count: 1 }
+				consume_items: false
+			}]
+		}
+		{
+			id: "ashline_q_press"
+			x: 2.0d
+			y: -1.0d
+			title: "Lis"
+			icon: "create:mechanical_press"
+			dependencies: ["ashline_q_waterwheel"]
+			tasks: [{
+				id: "t_press"
+				type: "item"
+				item: { id: "create:mechanical_press" Count: 1 }
+				consume_items: false
+			}]
+		}
+		{
+			id: "ashline_q_mixer"
+			x: 2.0d
+			y: 1.0d
+			title: "Mixer"
+			icon: "create:mechanical_mixer"
+			dependencies: ["ashline_q_waterwheel"]
+			tasks: [{
+				id: "t_mix"
+				type: "item"
+				item: { id: "create:mechanical_mixer" Count: 1 }
+				consume_items: false
+			}]
+		}
+		{
+			id: "ashline_q_brass"
+			x: 4.0d
+			y: 0.0d
+			title: "Mosaz"
+			icon: "create:brass_ingot"
+			dependencies: ["ashline_q_press" "ashline_q_mixer"]
+			tasks: [{
+				id: "t_brass"
+				type: "item"
+				item: { id: "create:brass_ingot" Count: 8 }
+			}]
+		}
+		{
+			id: "ashline_q_ammo_line"
+			x: 6.0d
+			y: 0.0d
+			title: "Linka munice"
+			description: ["Vyrob 32 nábojů na Create lince."]
+			icon: "ashline:brass_casing_ammo"
+			dependencies: ["ashline_q_brass"]
+			tasks: [{
+				id: "t_ammo"
+				type: "item"
+				item: { id: "tacz:9mm" Count: 32 }
+			}]
+			rewards: [
+				{
+					id: "r_parish"
+					type: "command"
+					command: "ashline standing add @s parish 80"
+					elevate_permisssions: true
+					title: "Parish standing +80"
+				}
+				{ id: "r_sch" type: "item" item: { id: "ashline:schematic_fragment" Count: 1 } }
+			]
+		}
+		{
+			id: "ashline_q_train_rail"
+			x: 6.0d
+			y: 2.0d
+			title: "Kolej"
+			optional: true
+			icon: "minecraft:rail"
+			dependencies: ["ashline_q_brass"]
+			tasks: [{ id: "t_rail" type: "checkmark" title: "Steam n Rails (volitelné)" }]
+		}
+	]
+}

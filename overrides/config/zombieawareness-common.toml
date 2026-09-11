@@ -1,0 +1,24 @@
+# Zombie Awareness — ASHLINE bible (scent OFF, sound ON, light OFF)
+# Typical path once mod is installed: config/zombieawareness-common.toml
+# If the mod uses a folder (zombieawareness/), keep these keys in its common config.
+
+[general]
+	# Blood / scent trail — NEVER enable for ASHLINE
+	scentEnabled = false
+	# Sound attraction — required
+	soundEnabled = true
+	# Light attraction must not replace FOV sight
+	lightEnabled = false
+	tickRate = 5
+
+[scent]
+	scentEnabled = false
+	maxRange = 0
+
+[sound]
+	soundEnabled = true
+	# Actual investigation radii come from ashline-senses emitSound table
+
+[light]
+	lightEnabled = false
+	lightAttractRange = 0

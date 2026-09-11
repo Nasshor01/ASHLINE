@@ -1,0 +1,60 @@
+{
+	id: "ashline_ch3"
+	filename: "3_prvni_mesto"
+	title: "První město"
+	icon: "minecraft:bricks"
+	order_index: 3
+	quest_links: []
+	quests: [
+		{
+			id: "ashline_q_enter_city"
+			x: 0.0d
+			y: 0.0d
+			title: "Město stojí"
+			description: ["Vstup do Lost Cities / městského biomu."]
+			icon: "minecraft:stone_bricks"
+			tasks: [{ id: "t_city" type: "checkmark" title: "Vstup do města" }]
+		}
+		{
+			id: "ashline_q_super_clear"
+			x: 2.0d
+			y: 0.0d
+			title: "Supermarket"
+			description: ["remaining=0 supermarket. /ashline remaining"]
+			icon: "minecraft:chest"
+			dependencies: ["ashline_q_enter_city"]
+			tasks: [{ id: "t_super" type: "checkmark" title: "Supermarket remaining=0" }]
+		}
+		{
+			id: "ashline_q_seal"
+			x: 4.0d
+			y: 0.0d
+			title: "Zapečeť"
+			description: ["Zabedni výlohy. /ashline seal"]
+			icon: "minecraft:iron_bars"
+			dependencies: ["ashline_q_super_clear"]
+			tasks: [{ id: "t_seal" type: "checkmark" title: "Seal" }]
+		}
+		{
+			id: "ashline_q_police"
+			x: 2.0d
+			y: 1.5d
+			title: "Policejní stanice"
+			description: ["Loot police station."]
+			icon: "minecraft:iron_ingot"
+			dependencies: ["ashline_q_enter_city"]
+			tasks: [{ id: "t_pol" type: "checkmark" title: "Loot stanice" }]
+		}
+		{
+			id: "ashline_q_hospital_wing"
+			x: 2.0d
+			y: -1.5d
+			title: "Křídlo A"
+			description: ["Přežij nemocniční křídlo A. Nemusíš čistit celou nemocnici."]
+			icon: "ashline:antibiotics"
+			dependencies: ["ashline_q_enter_city"]
+			tasks: [{ id: "t_hosp" type: "checkmark" title: "Křídlo A" }]
+			rewards: [{ id: "r_med" type: "item" item: { id: "ashline:bandage" Count: 4 } }]
+		}
+	]
+}

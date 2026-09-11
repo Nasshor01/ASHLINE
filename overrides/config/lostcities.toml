@@ -1,0 +1,16 @@
+# Lost Cities — ASHLINE starter (ruined modern profile)
+# Path after install: config/lostcities.toml or lostcities/*.cfg — merge carefully.
+
+[profiles]
+	# Prefer ruined modern / suburbs on edges (bible T2)
+	defaultProfile = "ashline_ruined_modern"
+
+[generation]
+	explosionChance = 0.02
+	cityLevelDense = true
+	prefabStyle = "modern"
+	# Indoor spawners forbidden — In Control + ashline-senses handle infected counts
+
+[ashline]
+	# Custom profile JSON can be added under config/lostcities/ when JAR is present
+	note = "Create ashline_ruined_modern profile at home after installing Lost Cities"

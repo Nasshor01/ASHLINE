@@ -1,0 +1,36 @@
+# Gradle / Forge MDK
+.gradle/
+**/build/
+**/run/
+**/out/
+**/bin/
+src/generated/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+eclipse/
+*.launch
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Secrets / local
+.env
+.env.*
+*.log
+crash-reports/
+logs/
+
+# Minecraft local noise if someone boots in-repo
+saves/
+screenshots/
+options.txt
+usercache.json
+usernamecache.json
+servers.dat

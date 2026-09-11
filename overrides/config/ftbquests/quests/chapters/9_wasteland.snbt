@@ -1,0 +1,73 @@
+{
+	id: "ashline_ch9"
+	filename: "9_wasteland"
+	title: "Druhé město"
+	icon: "ashline:antirad"
+	order_index: 9
+	quest_links: []
+	quests: [
+		{
+			id: "ashline_q_antirad"
+			x: 0.0d
+			y: 0.0d
+			title: "Antirad"
+			icon: "ashline:antirad"
+			tasks: [{ id: "t_ar" type: "item" item: { id: "ashline:antirad" Count: 1 } }]
+		}
+		{
+			id: "ashline_q_hazmat"
+			x: 2.0d
+			y: 0.0d
+			title: "Hazmat"
+			icon: "minecraft:leather_chestplate"
+			dependencies: ["ashline_q_antirad"]
+			tasks: [{ id: "t_haz" type: "checkmark" title: "Hazmat" }]
+		}
+		{
+			id: "ashline_q_plant"
+			x: 4.0d
+			y: 0.0d
+			title: "Elektrárna"
+			icon: "minecraft:redstone_block"
+			dependencies: ["ashline_q_hazmat"]
+			tasks: [{ id: "t_plant" type: "checkmark" title: "Navštiv elektrárnu" }]
+		}
+		{
+			id: "ashline_q_core_schematic"
+			x: 6.0d
+			y: 0.0d
+			title: "Schéma jádra"
+			icon: "ashline:schematic_fragment"
+			dependencies: ["ashline_q_plant"]
+			tasks: [{ id: "t_core" type: "item" item: { id: "ashline:schematic_fragment" Count: 1 } }]
+		}
+		{
+			id: "ashline_q_heli_parts"
+			x: 4.0d
+			y: 2.0d
+			title: "Heli díly"
+			icon: "ashline:engine_block_scrap"
+			dependencies: ["ashline_q_plant"]
+			tasks: [{ id: "t_heli_p" type: "checkmark" title: "Heli parts" }]
+		}
+		{
+			id: "ashline_q_heli_flight"
+			x: 6.0d
+			y: 2.0d
+			title: "Let"
+			icon: "minecraft:elytra"
+			dependencies: ["ashline_q_heli_parts"]
+			tasks: [{ id: "t_heli_f" type: "checkmark" title: "Heli flight" }]
+		}
+		{
+			id: "ashline_q_ultimate"
+			x: 8.0d
+			y: 1.0d
+			title: "Jádro"
+			description: ["Zabij pojmenovaného bosse v lab/reaktor."]
+			icon: "minecraft:netherite_sword"
+			dependencies: ["ashline_q_core_schematic"]
+			tasks: [{ id: "t_boss" type: "checkmark" title: "Boss lab/reaktor" }]
+		}
+	]
+}

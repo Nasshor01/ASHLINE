@@ -1,0 +1,68 @@
+{
+	id: "ashline_ch5"
+	filename: "5_lide"
+	title: "Lidé na mapě"
+	icon: "ashline:faction_chit_militia"
+	order_index: 5
+	quest_links: []
+	quests: [
+		{
+			id: "ashline_q_meet_militia"
+			x: 0.0d
+			y: 0.0d
+			title: "Militia"
+			description: ["Trade na checkpointu. Pořádek za daň munice."]
+			icon: "ashline:faction_chit_militia"
+			tasks: [{ id: "t_mil" type: "checkmark" title: "Trade Militia" }]
+		}
+		{
+			id: "ashline_q_meet_cut"
+			x: 2.0d
+			y: 1.0d
+			title: "The Cut"
+			description: ["Bazaar. Zboží, dluhy, zrada."]
+			icon: "ashline:faction_token_cut"
+			tasks: [{ id: "t_cut" type: "checkmark" title: "Bazaar Cut" }]
+		}
+		{
+			id: "ashline_q_meet_ward"
+			x: 2.0d
+			y: -1.0d
+			title: "White Ward"
+			description: ["Odevzdej 1 sample (rotten flesh se special NBT až T8)."]
+			icon: "ashline:faction_vial_ward"
+			tasks: [{
+				id: "t_ward"
+				type: "item"
+				item: { id: "minecraft:rotten_flesh" Count: 1 }
+			}]
+		}
+		{
+			id: "ashline_q_meet_parish"
+			x: 4.0d
+			y: 1.0d
+			title: "Iron Parish"
+			icon: "create:brass_casing"
+			tasks: [{ id: "t_par" type: "checkmark" title: "Parish dílna" }]
+		}
+		{
+			id: "ashline_q_meet_holds"
+			x: 4.0d
+			y: -1.0d
+			title: "Free Holds"
+			icon: "minecraft:wheat"
+			tasks: [{ id: "t_holds" type: "checkmark" title: "Holds farmy" }]
+		}
+		{
+			id: "ashline_q_radio"
+			x: 6.0d
+			y: 0.0d
+			title: "Rádio"
+			description: ["Slyš 3 relace (item use)."]
+			icon: "ashline:circuit_scrap"
+			dependencies: ["ashline_q_meet_militia"]
+			tasks: [{ id: "t_radio" type: "checkmark" title: "3 relace" }]
+			rewards: [{ id: "r_note" type: "item" item: { id: "minecraft:written_book" Count: 1 } }]
+		}
+	]
+}

@@ -1,0 +1,30 @@
+{
+  "id": "choir",
+  "display": {
+    "en_us": "The Choir",
+    "cs_cz": "Sbor"
+  },
+  "icon": "minecraft:wither_skeleton_skull",
+  "currency": "minecraft:bone",
+  "standing_min": -1000,
+  "standing_max": 1000,
+  "thresholds": {
+    "hostile": 0,
+    "neutral": -999,
+    "trusted": -999,
+    "allied": -999
+  },
+  "weights": {
+    "kill_member": 20,
+    "loot_chest": 0,
+    "save_member": -50,
+    "trade": 0,
+    "complete_contract": -100
+  },
+  "enemies": ["militia", "ward", "holds"],
+  "members": [
+    "ashline:choir_preacher",
+    "ashline:choir_thrall"
+  ],
+  "notes": "Standing only decreases unless nest is burned (then Militia/Ward gain)."
+}

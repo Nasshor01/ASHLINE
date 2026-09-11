@@ -1,0 +1,6 @@
+{
+  "entity.minecraft.zombie": "Walker",
+  "entity.minecraft.husk": "Dust Walker",
+  "entity.minecraft.drowned": "Flooded",
+  "entity.minecraft.zombie_villager": "Turned"
+}

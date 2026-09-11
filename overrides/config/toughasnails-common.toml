@@ -1,0 +1,15 @@
+# Tough As Nails — ASHLINE starter (1.20.1 Forge)
+# Path: config/toughasnails-common.toml (confirm after install)
+
+[thirst]
+	# +20% drain in wasteland / city heat — tune when biomes exist
+	thirstDrainRate = 1.2
+	# City / impure water sources
+	handDrinking = true
+
+[temperature]
+	enableTemperature = true
+
+[drink]
+	# Prefer purified / boiled water from KubeJS + Create
+	impureWaterCausesThirst = true

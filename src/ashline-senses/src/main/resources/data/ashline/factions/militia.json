@@ -1,0 +1,31 @@
+{
+  "id": "militia",
+  "display": {
+    "en_us": "Militia",
+    "cs_cz": "Milice"
+  },
+  "icon": "minecraft:iron_helmet",
+  "currency": "ashline:ammo_9mm",
+  "standing_min": -1000,
+  "standing_max": 1000,
+  "thresholds": {
+    "hostile": -400,
+    "neutral": 0,
+    "trusted": 200,
+    "allied": 500
+  },
+  "weights": {
+    "kill_member": -80,
+    "loot_chest": -10,
+    "save_member": 40,
+    "trade": 5,
+    "complete_contract": 60
+  },
+  "enemies": ["cut", "choir"],
+  "members": [
+    "ashline:militia_grunt",
+    "ashline:militia_officer",
+    "ashline:militia_quartermaster"
+  ],
+  "notes": "Consumed later by ashline-factions / standing commands in ashline-senses."
+}

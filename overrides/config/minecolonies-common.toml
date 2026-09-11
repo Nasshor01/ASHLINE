@@ -1,0 +1,17 @@
+# MineColonies — ASHLINE starter (T9 polish later)
+# Path: config/minecolonies-common.toml (or minecolonies-server.toml)
+
+[colony]
+	# Early cap until quest ashline:q_first_recruit — keep low
+	maxCitizensEarly = 5
+	# Mid/late raised by quests / ashline-factions later
+	maxCitizensDefault = 12
+
+[raids]
+	# Do NOT double-siege with ASHLINE hordes — soften MC raiders until T9
+	raidDifficultyMultiplier = 0.5
+	enableRaiderAmmunition = false
+
+[food]
+	# Prefer Farmer's Delight meals when those mods are installed
+	preferFarmersDelight = true

@@ -1,0 +1,31 @@
+{
+  "id": "cut",
+  "display": {
+    "en_us": "The Cut",
+    "cs_cz": "Řez"
+  },
+  "icon": "minecraft:iron_sword",
+  "currency": "minecraft:emerald",
+  "standing_min": -1000,
+  "standing_max": 1000,
+  "thresholds": {
+    "hostile": -400,
+    "neutral": 0,
+    "hire": 300,
+    "trusted": 300,
+    "allied": 600
+  },
+  "weights": {
+    "kill_member": -100,
+    "loot_chest": -5,
+    "save_member": 20,
+    "trade": 8,
+    "complete_contract": 80
+  },
+  "enemies": ["militia"],
+  "members": [
+    "ashline:cut_dealer",
+    "ashline:cut_enforcer"
+  ],
+  "notes": "Always trades; worse prices at low standing."
+}

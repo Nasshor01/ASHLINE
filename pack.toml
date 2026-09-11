@@ -1,0 +1,15 @@
+name = "ASHLINE"
+author = "ASHLINE"
+version = "0.1.0-design"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+
+[versions]
+minecraft = "1.20.1"
+forge = "47.4.0"
+
+# files[] stay empty until CurseForge download at home — add mods with:
+#   packwiz curseforge add <slug>
+# Then `packwiz refresh` and export.

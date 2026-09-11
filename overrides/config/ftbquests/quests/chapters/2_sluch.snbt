@@ -1,0 +1,55 @@
+{
+	id: "ashline_ch2"
+	filename: "2_sluch"
+	title: "Sluch"
+	icon: "ashline:pebble"
+	order_index: 2
+	quest_links: []
+	quests: [
+		{
+			id: "ashline_q_pebble"
+			x: 0.0d
+			y: 0.0d
+			title: "Kamínek"
+			description: ["Hoď pebble. Infikovaný jde ke zvuku, ne k tobě."]
+			icon: "ashline:pebble"
+			tasks: [{ id: "t_peb" type: "checkmark" title: "Použij pebble" }]
+		}
+		{
+			id: "ashline_q_stealth_kill"
+			x: 2.0d
+			y: 0.0d
+			title: "Ticho"
+			description: ["Zabij infected bez výstřelu."]
+			icon: "ashline:crowbar"
+			dependencies: ["ashline_q_pebble"]
+			tasks: [{
+				id: "t_stealth"
+				type: "kill"
+				entity: "minecraft:zombie"
+				value: 1L
+			}]
+		}
+		{
+			id: "ashline_q_suppressed"
+			x: 2.0d
+			y: 1.5d
+			title: "Tlumič"
+			description: ["Získej nebo vyrob tlumič. Iron sheet + cloth + bottle — lock do questu."]
+			icon: "minecraft:iron_nugget"
+			dependencies: ["ashline_q_pebble"]
+			tasks: [{ id: "t_sup" type: "checkmark" title: "Tlumič v inventáři" }]
+		}
+		{
+			id: "ashline_q_loud_mistake"
+			x: 2.0d
+			y: -1.5d
+			title: "Chyba"
+			description: ["Vystřel a přežij. Optional fail-flavor."]
+			icon: "minecraft:gunpowder"
+			optional: true
+			tasks: [{ id: "t_loud" type: "checkmark" title: "Výstřel a žiješ" }]
+			rewards: [{ id: "r_9mm" type: "item" item: { id: "tacz:9mm" Count: 12 } }]
+		}
+	]
+}

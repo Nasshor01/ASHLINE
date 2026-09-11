@@ -1,0 +1,56 @@
+{
+	id: "ashline_ch10"
+	filename: "10_koruna"
+	title: "Koruna nebo popel"
+	icon: "minecraft:nether_star"
+	order_index: 10
+	quest_links: []
+	quests: [
+		{
+			id: "ashline_end_citystate"
+			x: 0.0d
+			y: 0.0d
+			title: "Město-stát"
+			description: ["Proud + 25 kolonistů + walls."]
+			icon: "minecraft:beacon"
+			tasks: [{ id: "t_cs" type: "checkmark" title: "City-state" }]
+		}
+		{
+			id: "ashline_end_vassal"
+			x: 2.0d
+			y: 1.5d
+			title: "Vazal Militia"
+			description: ["militia ≥ 700"]
+			icon: "ashline:faction_chit_militia"
+			tasks: [{ id: "t_vas" type: "checkmark" title: "Militia 700" }]
+		}
+		{
+			id: "ashline_end_kingpin"
+			x: 2.0d
+			y: -1.5d
+			title: "Král Cutu"
+			description: ["cut ≥ 700 a vlastní zbrojovka"]
+			icon: "ashline:faction_token_cut"
+			tasks: [{ id: "t_king" type: "checkmark" title: "Cut 700 + zbrojovka" }]
+		}
+		{
+			id: "ashline_end_saint"
+			x: 4.0d
+			y: 1.5d
+			title: "Svatý Ward"
+			description: ["ward ≥ 700 a vakcína"]
+			icon: "ashline:antibiotics"
+			tasks: [{ id: "t_saint" type: "checkmark" title: "Ward 700 + vakcína" }]
+		}
+		{
+			id: "ashline_end_ash"
+			x: 4.0d
+			y: -1.5d
+			title: "Pád"
+			description: ["Osada destroyed (detect / command)."]
+			icon: "minecraft:soul_soil"
+			optional: true
+			tasks: [{ id: "t_ash" type: "checkmark" title: "Osada pryč" }]
+		}
+	]
+}

@@ -1,0 +1,4 @@
+hash-format = "sha256"
+
+# Empty until packwiz curseforge add … at home with network + CurseForge.
+# Overrides live under overrides/ and are copied into the instance as-is.

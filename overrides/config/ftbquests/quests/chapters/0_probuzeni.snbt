@@ -1,0 +1,73 @@
+{
+	id: "ashline_ch0"
+	filename: "0_probuzeni"
+	title: "Probuzení"
+	icon: "minecraft:writable_book"
+	order_index: 0
+	quest_links: []
+	quests: [
+		{
+			id: "ashline_q_wake"
+			x: 0.0d
+			y: 0.0d
+			title: "Otevři deník"
+			description: ["Otevři quest book. Tohle je ASHLINE. Nikdo tě nepřiletí zachránit."]
+			icon: "minecraft:writable_book"
+			tasks: [{ id: "t_wake" type: "checkmark" }]
+			rewards: [
+				{ id: "r_wake_p" type: "item" item: { id: "ashline:pebble" Count: 4 } }
+				{ id: "r_wake_b" type: "item" item: { id: "ashline:bandage" Count: 1 } }
+				{ id: "r_wake_m" type: "item" item: { id: "minecraft:map" Count: 1 } }
+			]
+		}
+		{
+			id: "ashline_q_thirst"
+			x: 2.0d
+			y: 0.0d
+			title: "Žízeň"
+			description: ["Vypij čistou nebo převařenou vodu. Kohoutek ve městě tě zabije."]
+			icon: "ashline:clean_water_bottle"
+			dependencies: ["ashline_q_wake"]
+			tasks: [{
+				id: "t_thirst"
+				type: "item"
+				item: { id: "ashline:clean_water_bottle" Count: 1 }
+				consume_items: false
+			}]
+		}
+		{
+			id: "ashline_q_food"
+			x: 2.0d
+			y: 1.5d
+			title: "Jídlo"
+			description: ["Sjez něco, než zčerná. Konzervy vydrží. Maso ne."]
+			icon: "ashline:canned_food"
+			dependencies: ["ashline_q_wake"]
+			tasks: [{ id: "t_food" type: "checkmark" title: "Sjez jídlo" }]
+		}
+		{
+			id: "ashline_q_blade"
+			x: 2.0d
+			y: -1.5d
+			title: "Ostří"
+			description: ["Vyrob nůž nebo crowbar ze šrotu. Stůl nestačí na pušku."]
+			icon: "ashline:crowbar"
+			dependencies: ["ashline_q_wake"]
+			tasks: [{
+				id: "t_blade"
+				type: "item"
+				item: { id: "ashline:crowbar" Count: 1 }
+			}]
+		}
+		{
+			id: "ashline_q_hide"
+			x: 4.0d
+			y: 0.0d
+			title: "První noc"
+			description: ["Přežij první noc v zavřeném domě. Žádný výstřel, pokud nemusíš."]
+			icon: "minecraft:oak_door"
+			dependencies: ["ashline_q_thirst" "ashline_q_food" "ashline_q_blade"]
+			tasks: [{ id: "t_hide" type: "checkmark" title: "Přežij noc" }]
+		}
+	]
+}

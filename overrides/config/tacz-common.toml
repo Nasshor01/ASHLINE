@@ -1,0 +1,16 @@
+# TaCZ (Timeless and Classics Zero) — ASHLINE bible
+# Path after install: often config/tacz-common.toml or config/tacz/*.toml — merge.
+
+[gun]
+	# Default easy gun craft OFF — KubeJS removes/replaces recipes
+	defaultGunCraftEnabled = false
+	enableGunDurability = true
+	# Headshot multiplier 2.0–2.5
+	headShotMultiplier = 2.25
+
+[ammo]
+	# Ammo economy from Create + KubeJS (see docs/03)
+
+[sound]
+	# Suppressor should reduce noise; hook AshlineSenses.emitSound from gun events later
+	# pistol 70/48, suppressed 32/22 (docs/07)

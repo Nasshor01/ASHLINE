@@ -1,0 +1,55 @@
+{
+	id: "ashline_ch6"
+	filename: "6_stroj"
+	title: "První stroj"
+	icon: "ashline:tire"
+	order_index: 6
+	quest_links: []
+	quests: [
+		{
+			id: "ashline_q_tires"
+			x: 0.0d
+			y: 0.0d
+			title: "Pneumatiky"
+			icon: "ashline:tire"
+			tasks: [{ id: "t_tire" type: "item" item: { id: "ashline:tire" Count: 4 } }]
+		}
+		{
+			id: "ashline_q_battery"
+			x: 2.0d
+			y: 0.0d
+			title: "Baterie"
+			icon: "ashline:battery_charged"
+			tasks: [{ id: "t_bat" type: "item" item: { id: "ashline:battery_charged" Count: 1 } }]
+		}
+		{
+			id: "ashline_q_buggy"
+			x: 4.0d
+			y: 0.0d
+			title: "Buggy"
+			description: ["Used IV vehicle. Wrak, ne creative."]
+			icon: "ashline:engine_block_scrap"
+			dependencies: ["ashline_q_tires" "ashline_q_battery"]
+			tasks: [{ id: "t_buggy" type: "checkmark" title: "Sedni do IV" }]
+		}
+		{
+			id: "ashline_q_fuel_8"
+			x: 4.0d
+			y: 1.5d
+			title: "Benzín"
+			icon: "ashline:gasoline_can"
+			tasks: [{ id: "t_fuel" type: "item" item: { id: "ashline:gasoline_can" Count: 8 } }]
+		}
+		{
+			id: "ashline_q_drive_1k"
+			x: 6.0d
+			y: 0.0d
+			title: "Tisíc bloků"
+			description: ["Ujedi 1000 bloků (stat / custom T10)."]
+			icon: "minecraft:compass"
+			dependencies: ["ashline_q_buggy" "ashline_q_fuel_8"]
+			tasks: [{ id: "t_drive" type: "checkmark" title: "1000 bloků" }]
+			rewards: [{ id: "r_die" type: "item" item: { id: "ashline:diesel_can" Count: 1 } }]
+		}
+	]
+}

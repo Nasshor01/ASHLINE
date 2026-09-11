@@ -1,0 +1,29 @@
+{
+  "id": "parish",
+  "display": {
+    "en_us": "Parish",
+    "cs_cz": "Farnost"
+  },
+  "icon": "create:brass_ingot",
+  "currency": "create:brass_ingot",
+  "standing_min": -1000,
+  "standing_max": 1000,
+  "thresholds": {
+    "hostile": -200,
+    "neutral": 0,
+    "trusted": 80,
+    "allied": 400
+  },
+  "weights": {
+    "kill_member": -60,
+    "loot_chest": -15,
+    "save_member": 30,
+    "trade": 6,
+    "complete_contract": 50
+  },
+  "enemies": [],
+  "members": [
+    "ashline:parish_foreman"
+  ],
+  "notes": "Unlocks hidden Create recipes via quest + standing."
+}

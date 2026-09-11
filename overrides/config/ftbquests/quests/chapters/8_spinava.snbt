@@ -1,0 +1,85 @@
+{
+	id: "ashline_ch8"
+	filename: "8_spinava"
+	title: "Špinavá práce"
+	icon: "minecraft:tnt"
+	order_index: 8
+	quest_links: []
+	quests: [
+		{
+			id: "ashline_q_sell_guns_cut"
+			x: 0.0d
+			y: 1.0d
+			title: "Prodej Cutu"
+			description: ["Předej 64 ammo Cut. Militia −150, Cut +200. Zamyká částečně militia daň."]
+			icon: "ashline:faction_token_cut"
+			tasks: [{ id: "t_sell" type: "item" item: { id: "tacz:9mm" Count: 64 } }]
+			rewards: [
+				{
+					id: "r_cut"
+					type: "command"
+					command: "ashline standing add @s cut 200"
+					elevate_permisssions: true
+					title: "Cut standing +200"
+				}
+				{
+					id: "r_cut_mil"
+					type: "command"
+					command: "ashline standing add @s militia -150"
+					elevate_permisssions: true
+					title: "Militia standing −150"
+				}
+			]
+		}
+		{
+			id: "ashline_q_militia_tax"
+			x: 0.0d
+			y: -1.0d
+			title: "Daň Militia"
+			description: ["Zaplať daň. Militia +120, Cut −50."]
+			icon: "ashline:faction_chit_militia"
+			tasks: [{ id: "t_mtax" type: "checkmark" title: "Zaplať daň" }]
+			rewards: [
+				{
+					id: "r_mtax"
+					type: "command"
+					command: "ashline standing add @s militia 120"
+					elevate_permisssions: true
+					title: "Militia standing +120"
+				}
+				{
+					id: "r_mtax_cut"
+					type: "command"
+					command: "ashline standing add @s cut -50"
+					elevate_permisssions: true
+					title: "Cut standing −50"
+				}
+			]
+		}
+		{
+			id: "ashline_q_ward_live_sample"
+			x: 3.0d
+			y: 0.0d
+			title: "Živý vzorek"
+			description: ["Rizikový quest nemocnice."]
+			icon: "ashline:faction_vial_ward"
+			tasks: [{ id: "t_live" type: "checkmark" title: "Live sample" }]
+		}
+		{
+			id: "ashline_q_choir_burn"
+			x: 6.0d
+			y: 0.0d
+			title: "Spal hnízdo"
+			description: ["Spálit Choir nest. Choir −400."]
+			icon: "minecraft:flint_and_steel"
+			tasks: [{ id: "t_burn" type: "checkmark" title: "Burn nest" }]
+			rewards: [{
+				id: "r_choir"
+				type: "command"
+				command: "ashline standing add @s choir -400"
+				elevate_permisssions: true
+				title: "Choir standing −400"
+			}]
+		}
+	]
+}

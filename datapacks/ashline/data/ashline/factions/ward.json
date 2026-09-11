@@ -1,0 +1,30 @@
+{
+  "id": "ward",
+  "display": {
+    "en_us": "Ward",
+    "cs_cz": "Oddělení"
+  },
+  "icon": "minecraft:potion",
+  "currency": "minecraft:rotten_flesh",
+  "standing_min": -1000,
+  "standing_max": 1000,
+  "thresholds": {
+    "hostile": -300,
+    "neutral": 0,
+    "trusted": 200,
+    "allied": 500
+  },
+  "weights": {
+    "kill_member": -120,
+    "loot_chest": -20,
+    "save_member": 50,
+    "trade": 10,
+    "complete_contract": 70
+  },
+  "enemies": ["choir"],
+  "members": [
+    "ashline:ward_medic",
+    "ashline:ward_orderly"
+  ],
+  "notes": "Vaccine component unlock at standing >= 500."
+}

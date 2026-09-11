@@ -1,0 +1,74 @@
+{
+	id: "ashline_ch7"
+	filename: "7_osada"
+	title: "Osada"
+	icon: "minecraft:bell"
+	order_index: 7
+	quest_links: []
+	quests: [
+		{
+			id: "ashline_q_townhall"
+			x: 0.0d
+			y: 0.0d
+			title: "Town hall"
+			description: ["Lock: filtr + 8 konzerv + seal. Polož MineColonies town hall. Early max 5 citizens."]
+			icon: "minecraft:oak_sign"
+			dependencies: ["ashline_q_filter" "ashline_q_cans" "ashline_q_seal"]
+			tasks: [{ id: "t_th" type: "checkmark" title: "Town hall" }]
+		}
+		{
+			id: "ashline_q_beds_4"
+			x: 2.0d
+			y: -1.0d
+			title: "Postele"
+			icon: "minecraft:red_bed"
+			dependencies: ["ashline_q_townhall"]
+			tasks: [{ id: "t_beds" type: "item" item: { id: "minecraft:red_bed" Count: 4 } consume_items: false }]
+		}
+		{
+			id: "ashline_q_cook"
+			x: 2.0d
+			y: 1.0d
+			title: "Kuchař"
+			icon: "minecraft:smoker"
+			dependencies: ["ashline_q_townhall"]
+			tasks: [{ id: "t_cook" type: "checkmark" title: "Cook citizen" }]
+		}
+		{
+			id: "ashline_q_guard"
+			x: 4.0d
+			y: 0.0d
+			title: "Rekrut"
+			description: ["1 Recruits hire. Není MineColonies worker."]
+			icon: "minecraft:iron_sword"
+			dependencies: ["ashline_q_townhall"]
+			tasks: [{ id: "t_guard" type: "checkmark" title: "Hire recruit" }]
+		}
+		{
+			id: "ashline_q_walls"
+			x: 4.0d
+			y: 1.5d
+			title: "Zdi"
+			icon: "minecraft:cobblestone_wall"
+			dependencies: ["ashline_q_townhall"]
+			tasks: [{ id: "t_walls" type: "checkmark" title: "Zdi osady" }]
+		}
+		{
+			id: "ashline_q_tax"
+			x: 6.0d
+			y: 0.0d
+			title: "Daň"
+			description: ["Rozhodni daň (choice)."]
+			icon: "create:bar_of_chocolate"
+			dependencies: ["ashline_q_guard"]
+			tasks: [{ id: "t_tax" type: "checkmark" title: "Choice daň" }]
+			rewards: [{
+				id: "r_holds"
+				type: "command"
+				command: "ashline standing add @s holds 100"
+				elevate_permisssions: true
+				title: "Holds standing +100"
+			}]
+		}
+	]
+}

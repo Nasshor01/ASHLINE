@@ -1,0 +1,6 @@
+{
+	version: 13
+	default_quest_shape: "rsquare"
+	disable_gui: false
+	drop_loot_crates: false
+}

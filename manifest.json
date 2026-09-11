@@ -1,0 +1,19 @@
+{
+  "minecraft": {
+    "version": "1.20.1",
+    "modLoaders": [
+      {
+        "id": "forge-47.4.0",
+        "primary": true
+      }
+    ]
+  },
+  "manifestType": "minecraftModpack",
+  "manifestVersion": 1,
+  "name": "ASHLINE",
+  "version": "0.2.0-wip",
+  "author": "ASHLINE",
+  "overrides": "overrides",
+  "files": [],
+  "_comment": "files[] empty on purpose — download mods at home via CurseForge/packwiz. Pack content is under overrides/ + src/ashline-senses."
+}
